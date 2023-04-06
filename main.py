@@ -34,7 +34,7 @@ bot = Client(
     api_hash=os.environ.get("API_HASH")
 )
 
-@bot.on_message(filters.command(["start"])& ~filters.edited)
+@bot.on_message(filters.command(["start"])& 
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text("Hello im txt file downloader\nPress /pyro to download links listed in a txt file in the format **Name:link**\n\nBot made by BATMAN")
 
@@ -50,7 +50,7 @@ async def restart_handler(_, m):
     await m.reply_text("Restarted!", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
-@bot.on_message(filters.command(["pyro"])& ~filters.edited)
+@bot.on_message(filters.command(["pyro"])& 
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text("Send txt file**")
     input: Message = await bot.listen(editable.chat.id)
@@ -359,7 +359,7 @@ async def account_login(bot: Client, m: Message):
     
     
     
-@bot.on_message(filters.command(["jw"])&  ~filters.edited)
+@bot.on_message(filters.command(["jw"])&  
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text("Send txt file**")
     input: Message = await bot.listen(editable.chat.id)
