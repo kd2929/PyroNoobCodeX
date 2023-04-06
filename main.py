@@ -34,7 +34,7 @@ bot = Client(
     api_hash=os.environ.get("API_HASH")
 )
 
-@bot.on_message(filters.command(["start"])& 
+@bot.on_message(filters.command(["start"])
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text("Hello im txt file downloader\nPress /pyro to download links listed in a txt file in the format **Name:link**\n\nBot made by BATMAN")
 
